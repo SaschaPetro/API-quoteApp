@@ -5,9 +5,9 @@ function getQuote() {
     .then((response) => response.json())
     .then((data) => {
       for (let quoteData of data.data) {
-        const listItem = document.createElement("li");
+        const listItem = document.getElementById("quote");
         listItem.innerHTML = quoteData.quoteText;
-        document.querySelector(".list").append(listItem);
+        document.querySelector(".list").appendChild(listItem);
       }
     });
 }
